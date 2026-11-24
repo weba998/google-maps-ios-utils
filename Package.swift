@@ -18,8 +18,10 @@ import PackageDescription
 
 let package = Package(
   name: "GoogleMapsUtils",
+  // Changed from upstream v7.1.2: raised from iOS 16, because Maps SDK
+  // for iOS 11.3.0 and later require iOS 17 (upstream issue #582).
   platforms: [
-    .iOS(.v16),
+    .iOS(.v17),
   ],
   products: [
     .library(
